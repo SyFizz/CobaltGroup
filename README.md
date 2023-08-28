@@ -20,6 +20,7 @@ To run this website, run the commands below in a shell.
   cp .env.example .env
   php artisan key:generate
   npm install
+  npm run build
 ```
 
 Then, configure the .env file to your needs :
