@@ -19,14 +19,31 @@
             @include('layouts.navigation')
 
             <!-- Page Heading -->
-            @if (isset($header))
+        @if (isset($header))
                 <header class="bg-white shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
                 </header>
             @endif
-            @if(session('success'))
+            @if(isset($navlinks))
+                <nav class="bg-white border-b border-gray-100">
+
+                    <!-- Primary Navigation Menu -->
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex justify-between h-16">
+                            <div class="flex">
+
+                                <div class="hidden space-x-8 sm:-my-px  sm:flex">
+                                    {{ $navlinks }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </nav>
+            @endif
+        @if(session('success'))
                 <div class="mx-6 mt-3 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
                     <strong class="font-bold">{{ session('success') }}</strong>
                 </div>
