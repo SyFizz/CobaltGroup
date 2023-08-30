@@ -7,8 +7,7 @@ class IpamController extends Controller
 
     public function index()
     {
-        $subnavigation = true;
-        return view('ipam.index')->with($subnavigation);
+        return view('ipam.index');
     }
 
 }

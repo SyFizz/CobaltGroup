@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class AddressBlock extends Model
 {
@@ -16,7 +17,7 @@ class AddressBlock extends Model
         'comment',
     ];
 
-    public function addresses()
+    public function addresses(): HasMany
     {
         return $this->hasMany(Address::class);
     }
